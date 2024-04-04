@@ -1,0 +1,78 @@
+.IMG-HEADER {
+    width: 60%;
+    animation: heartbeat 5s infinite alternate;
+}
+
+.header-content h2 {
+    color: #ffba00;
+    font-family: "Oswald", Sans-serif;
+    font-size: 62px;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* line-height: 1em; */
+}
+.header-content p {
+   color: #fff;
+   font-size: 20px; 
+}
+.header-content {
+    animation: fadeIn 3s;
+}
+
+.header-content button {
+    background: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    transition: 0.3s ease all;
+}
+
+.header-content button:hover {
+    background: #fff;
+    color: #000;
+    border: none;
+}
+.phone-text {
+    color: #ccc !important;
+}
+
+.phone-text span {
+    color: #8c7000;
+}
+
+.changing_border {
+    background: #1a1a1a !important;
+    border: none !important;
+    border-radius: 10px;
+}
+
+.icon-border {
+    background: #8c7000 !important;
+    border: none !important;
+    border-radius: 10px;
+}
+.icon-border svg {
+    font-size: 30px;
+    color: #fff;
+}
+
+.icon-border svg:hover {
+    color: #1a1a1a;
+}
+
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
