@@ -3,7 +3,7 @@ import "./Header.css";
 import { assets } from "../../assets/assets";
 const Header = () => {
   return (
-    <div className="container pt-5">
+    <div className="container pt-lg-5">
       <div className="row mt-5">
         <div className="col-lg-6 col-12">
           <img className="IMG-HEADER" src={assets.N2HMMGN} alt="" />

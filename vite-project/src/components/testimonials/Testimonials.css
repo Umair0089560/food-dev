@@ -3,29 +3,37 @@
     padding-top: 100px;
 }
 
-.testimonial .copy {
+/* .testimonial .copy {
     text-align: center;
     padding: 40px 20px;
     box-shadow: 0 0 20px 0px rgb(194, 194, 194);
     cursor: pointer;
     transition: transform 0.5s;
-    width: 400px;
+    width: 100%;
     border-radius: 10px;
+} */
+
+.testimonial .copy {
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgb(194, 194, 194);
+    cursor: pointer;
+    transition: transform 0.5s;
+    border-radius: 10px;
+    text-align: center;
+    
 }
-
-
 
 .testimonial .copy:hover {
     transform: translateY(-10px);
 }
 
 .rating .fa {
-    color: #ff523b;
+        color: var(--color-golden);
 }
 
 .fa.fa-quote-left {
     font-size: 34px;
-    color: #ff523b;
+        color: var(--color-golden);
 }
 
 .copy p {

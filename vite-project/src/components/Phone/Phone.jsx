@@ -19,12 +19,12 @@ const Phone = () => {
             take care of the rest. Enjoy the best food, hassle-free!
           </p>
           <div className="border p-3 changing_border">
-            <div className="d-flex gap-5">
-              <div className="border p-5 icon-border">
-                <BsTruck />
+            <div className="d-flex gap-lg-5 gap-md-5">
+              <div className="border p-lg-5 p-3 icon-border">
+                <BsTruck  className="mt-lg-0 mt-3"/>
               </div>
               <div className="d-block">
-                <h4 style={{color: "#8c7000"}} className="text-bold">FREE DELIVERY</h4>
+                <h4 style={{color: "#DCCA87"}} className="text-bold">FREE DELIVERY</h4>
                 <p className="phone-text">
                   Enjoy the ultimate convenience with our Free Delivery service!
                 </p>
@@ -32,21 +32,27 @@ const Phone = () => {
             </div>
           </div>
           <div className="border p-3 changing_border mt-4">
-            <div className="d-flex gap-5">
-              <div className="border p-5 icon-border">
-                <FaMoneyBillWave />
+            <div className="d-flex gap-lg-5 gap-md-5">
+              <div className="border p-lg-5 p-3 icon-border">
+                <FaMoneyBillWave  className="mt-lg-0 mt-3"/>
               </div>
               <div className="d-block">
-                <h4 style={{color: "#8c7000"}} className="text-bold">SPECIAL PROMO</h4>
+                <h4 style={{color: "#DCCA87"}} className="text-bold">SPECIAL PROMO</h4>
                 <p className="phone-text">
                 Get ready for a flavor-filled treat with our Special Prom
                 </p>
               </div>
             </div>
           </div>
-          <div className="d-flex mt-5 gap-5">
+          <div className="row mt-5">
+            <div className="col-lg-6 col-12">
+
                 <img src={assets.app_store} alt="" />
+            </div>
+            <div className="col-lg-6 col-12">
+
                 <img src={assets.play_store} alt="" />
+            </div>
           </div>
         </div>
       </div>
