@@ -5,7 +5,7 @@ import { BsTruck } from "react-icons/bs";
 import { FaMoneyBillWave } from "react-icons/fa";
 const Phone = () => {
   return (
-    <div className="container pt-5">
+    <div className="container pt-5" id="Phone">
       <div className="row mt-5">
         <div className="col-lg-6 col-12">
           <img className="IMG-HEADER" src={assets.food_Clay} alt="" />
