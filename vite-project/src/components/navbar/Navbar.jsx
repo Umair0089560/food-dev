@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets } from "../../assets/assets"
 import { IoIosSearch } from "react-icons/io";
 import { IoIosBasket } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import "./Navbar.css"
+import { StoreContext } from '../../context/StoreContext';
 const Navbar = ({setShowLogin}) => {
     const [menu,setMenu] = useState("home")
+    const {getTotalAmount} = useContext(StoreContext)
   return (
     <div className='navbar'>
         <Link to="./">
@@ -24,7 +26,7 @@ const Navbar = ({setShowLogin}) => {
             <Link to="/cart">
             <div className="navbar-search-icon">
             <IoIosBasket className="icons"/>
-                <div className="dot"></div>
+                <div className={getTotalAmount()===0?"":"dot"}></div>
             </div>
             </Link>
                 <button onClick={()=> setShowLogin(true)}>Sign In</button>

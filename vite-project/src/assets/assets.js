@@ -61,6 +61,7 @@ import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 import N2HMMGN from './N2HMMGN-2.png'
 import food_Clay from './food-Clay-01.jpg'
+import burrgercart from "./burrgercart.webp"
 export const assets = {
     logo,
     basket_icon,
@@ -82,7 +83,8 @@ export const assets = {
     bag_icon,
     parcel_icon,
     N2HMMGN,
-    food_Clay
+    food_Clay,
+    burrgercart
 }
 
 export const menu_list = [
