@@ -1,0 +1,78 @@
+.add {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: var(--color-golden);
+    font-style: 16px;
+}
+
+.add form {
+    gap: 20px;
+}
+
+.add-img-upload img {
+    width: 120px;
+}
+
+.add-product-name, .add-product-decription {
+    width: max(40%, 280px);
+}
+
+
+
+
+.add-category-price {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+
+
+.add-button button {
+    background: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer; 
+    transition: 0.3s ease all;
+}
+
+.add-button button:hover {
+    background: #fff;
+    color: #000;
+    border: none;
+}
+
+.login-popup-input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-input input, textarea, select {
+    outline: none;
+    border: 1px solid var(--color-golden);
+    padding: 10px;
+    border-radius: 4px;
+    
+}
+
+.login-popup-input select {
+    width: max(20%, 180px);
+}
+.add-price {
+    width: max(20%, 180px);
+}
+
+@media (max-width: 600px) {
+    .login-popup-input select {
+        width: max(10%, 120px);
+    }
+    .add-price {
+        width: max(10%, 120px);
+    }
+}
