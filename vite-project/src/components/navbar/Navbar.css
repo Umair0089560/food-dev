@@ -119,3 +119,44 @@
     }
    
 }
+
+.navbar-profile {
+    position: relative;
+
+}
+.navbar-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #000;
+    border: 1px solid var(--color-golden);
+    padding: 12px 25px;
+    border-radius: 4px;
+    color: var(--color-golden);
+    outline: 2px solid #000;
+    list-style: none;
+}
+
+.navbar-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.navbar-profile-dropdown img {
+    width: 20px;
+
+}
+
+.navbar-profile-dropdown li:hover {
+    padding-left: 20%;
+    transition: 1s;
+}

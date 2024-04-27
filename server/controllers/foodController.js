@@ -15,6 +15,8 @@ const addFood = async (req, res) => {
         category: req.body.category,
         image: image_filename
     })
+    
+    console.log("food ::::: addd", food);
     try {
         await food.save();
         res.json({success:true, message: "Product add successfully"})
@@ -41,12 +43,14 @@ const listFood = async (req, res) => {
 // Update food item
 const updateFood = async (req, res) => {
     try {
+        
         const food = await foodModel.findById(req.params.id);
-
+        
+     
         if (!food) {
             return res.status(404).json({ success: false, message: "Food item not found" });
         }
-
+       
         food.name = req.body.name || food.name;
         food.description = req.body.description || food.description;
         food.price = req.body.price || food.price;

@@ -30,3 +30,40 @@
 .curser {
     cursor: pointer;
 }
+
+.login-popup {
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+    justify-content: center;
+}
+
+.login-popup-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: var(--color-golden);
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+
+.login-popup-input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-input input {
+    outline: none;
+    border: 1px solid var(--color-golden);
+    padding: 10px;
+    border-radius: 4px;
+}

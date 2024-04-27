@@ -42,12 +42,14 @@ const List = () => {
   };
 
   const handleSaveChanges = async () => {
-    const response = await axios.put(`${url}/api/food/update`, {
+    console.log("before submit", selectedItem._id, editedName, editedCategory, editedPrice);
+    const response = await axios.put(`${url}/api/food/update/${selectedItem._id}`, {
       id: selectedItem._id,
       name: editedName,
       category: editedCategory,
       price: editedPrice,
     });
+    console.log("response", response)
     if (response.data.success) {
       toast.success(response.data.message);
       setEditModalOpen(false);
@@ -80,7 +82,10 @@ const List = () => {
             <p>{item.name}</p>
             <p>{item.category}</p>
             <p>{item.price}</p>
-            <button onClick={() => handleEdit(item)}>Edit</button>
+            <button className="custom__button" style={{ 
+              width: '80px',
+              cursor: 'pointer'
+            }} onClick={() => handleEdit(item)}>Edit</button>
             <p onClick={() => removeFood(item._id)} className="curser">
               X
             </p>
@@ -90,8 +95,12 @@ const List = () => {
     </div>
 
     {editModalOpen && (
-      <div className="edit-modal">
+      <div className="login-popup">
+        <div className="login-popup-container">
+
         <h3>Edit Food Item</h3>
+        <div className="login-popup-input">
+
         <input
           type="text"
           value={editedName}
@@ -103,12 +112,20 @@ const List = () => {
           onChange={(e) => setEditedCategory(e.target.value)}
         />
         <input
-          type="text"
+          type="text" 
           value={editedPrice}
           onChange={(e) => setEditedPrice(e.target.value)}
         />
-        <button onClick={handleSaveChanges}>Save Changes</button>
-        <button onClick={() => setEditModalOpen(false)}>Cancel</button>
+        </div>
+        <button className="custom__button" style={{ 
+          width: '120px',
+          cursor: 'pointer'
+        }} onClick={handleSaveChanges}>Save Changes</button>
+        <button className="custom__button" style={{ 
+          width: '100px',
+          cursor: 'pointer'
+        }} onClick={() => setEditModalOpen(false)}>Cancel</button>
+        </div>
       </div>
     )}
   </div>

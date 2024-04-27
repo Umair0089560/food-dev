@@ -21,7 +21,7 @@ foodRouter.post("/add",upload.single("image"),addFood);
 foodRouter.get("/list",listFood)
 
 foodRouter.post("/remove",removeFood);
-foodRouter.put("/update", updateFood)
+foodRouter.put("/update/:id", updateFood)
 
 
 export default foodRouter

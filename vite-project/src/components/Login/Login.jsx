@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import { assets } from "../../assets/assets";
@@ -21,24 +21,24 @@ const Login = ({ setShowLogin }) => {
   const onLogins = async (event) => {
     event.preventDefault();
     let newUrl = url;
+    
     if (currState === "Login") {
-      newUrl += "api/user/login";
+      newUrl += "/api/user/login";
     } else {
-      newUrl += "api/user/register";
+      newUrl += "/api/user/register";
     }
+    console.log(newUrl);
     const response = await axios.post(newUrl,data);
     if (response.data.success) {
       setToken(response.data.token);
       localStorage.setItem("token", response.data.token);
       setShowLogin(false);
+      
     } else {
       alert(response.data.message);
     }
   }
 
-  useEffect(()=> {
-    console.log(data)
-  },[data])
 
   return (
     <div className="login-popup">
