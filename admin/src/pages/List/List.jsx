@@ -77,7 +77,7 @@ const List = () => {
       </div>
       {list.map((item, index) => {
         return (
-          <div key={index} className="list-table-format">
+          <div key={index} className="list-table-format dataa">
             <img src={`${url}/images/` + item.image} alt="" />
             <p>{item.name}</p>
             <p>{item.category}</p>

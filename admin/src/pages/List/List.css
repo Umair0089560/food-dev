@@ -1,3 +1,13 @@
+.list  {
+    margin-bottom: 5%;
+
+}
+.list-table  {
+    height: 577px;
+    overflow-y: scroll !important;
+}
+
+
 .list-table-format {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;

@@ -1,23 +1,32 @@
 import React from "react";
-import "./Header.css";
+import Slider from "react-slick";
 import { assets } from "../../assets/assets";
-const Header = () => {
+import './Header.css'
+export default function Header() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
-    <div className="container pt-lg-5">
-      <div className="row mt-5">
-        <div className="col-lg-6 col-12">
-          <img className="IMG-HEADER" src={assets.N2HMMGN} alt="" />
-        </div>
-        <div className="col-lg-6 col-12 header-content">
-          <h2>WELCOME TO BURGER RESORT-THE SAUCE EXPERT.</h2>
-          <p>
-          Burger Resort, The Sauce Expert. We will serve you with different types of burgers, wraps, fries, nuggets, wings, loaded fries and a finger licking taste of different types of spices. Hence the name is, ” The Sauce Expert” The best burger point in the town.
-          </p>
-          <button>Contact Us</button>
-        </div>
+   <div className="mt-lg-5">
+     <Slider {...settings}>
+      <div className="banner">
+        <img className="img-fluid" src={assets.banner_1} alt="" />
       </div>
-    </div>
-  );
-};
+      <div className="banner">
+        <img className="img-fluid" src={assets.banner_2} alt="" />
+      </div>
+      <div className="banner">
+      <img className="img-fluid" src={assets.banner_3} alt="" />
+      </div>
+    
+    </Slider>
 
-export default Header;
+    <h2 className="mt-5 text-light bold">Explore Menu</h2>
+   </div>
+  );
+}
+
