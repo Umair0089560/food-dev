@@ -8,7 +8,8 @@ import PlaceOrder from "./pages/PlaceOrder/PlaceOrder"
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
 
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   const [showLogin,setShowLogin] = useState(false)
   return (
